@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Christmas - 3D Particle Space</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #000411;
+      color: #fff;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #root {
+      width: 100vw;
+      height: 100vh;
+    }
+    canvas {
+      display: block;
+    }
+    /* Stylized danmaku animation */
+    @keyframes danmaku {
+      from { transform: translateX(100vw); }
+      to { transform: translateX(-100%); }
+    }
+    .danmaku-item {
+      position: absolute;
+      white-space: nowrap;
+      pointer-events: none;
+      animation: danmaku linear forwards;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      filter: drop-shadow(0 0 5px currentColor);
+    }
+    
+    ::-webkit-scrollbar { width: 0; background: transparent; }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "three": "https://esm.sh/three@^0.182.0"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>

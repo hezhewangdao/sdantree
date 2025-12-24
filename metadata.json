@@ -1,0 +1,7 @@
+{
+  "name": "3D Particle Christmas Tree",
+  "description": "A festive 3D particle Christmas tree with a Web Audio synthesized Jingle Bells theme and a dynamic danmaku (bullet chat) message system.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
